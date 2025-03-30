@@ -1,14 +1,14 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import classes from './post-item.module.css';
+import Link from "next/link";
+import Image from "next/image";
+import classes from "./post-item.module.css";
 
 function PostItem(props) {
   const { title, image, excerpt, date, slug } = props.post;
 
-  const formattedDate = new Date(date).toLocaleDateString('en-US', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
+  const formattedDate = new Date(date).toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
   });
 
   const imagePath = `/images/posts/${slug}/${image}`;
@@ -19,7 +19,14 @@ function PostItem(props) {
       <Link href={linkPath} legacyBehavior>
         <a>
           <div className={classes.image}>
-            <Image src={imagePath} alt={title} width={300} height={200} layout="responsive" />
+            <Image
+              src={imagePath}
+              alt={title}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: "cover" }}
+            />
           </div>
           <div className={classes.content}>
             <h3>{title}</h3>
