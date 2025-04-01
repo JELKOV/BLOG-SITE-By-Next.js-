@@ -41,7 +41,7 @@ async function handler(req, res) {
       newMessage.id = result.insertedId; // 응답에 ID 포함
     } catch (error) {
       client.close();
-      res.status(500).json({ message: "Storing message failed!" });
+      res.status(500).json({ message: "Storing message failed!!" });
       return;
     }
 
