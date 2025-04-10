@@ -5,7 +5,7 @@
 👉 https://blog-site-by-next-js.vercel.app
 
 ## 📌 프로젝트 소개  
-이 프로젝트는 **Next.js Page Router 방식 기반의 정적 사이트 생성(SSG)**과 **서버리스 API 라우트**를 모두 활용한 **풀스택 블로그 웹사이트**입니다.  
+이 프로젝트는 Next.js Page Router 방식 기반의 정적 사이트 생성(SSG)과 **서버리스 API 라우트**를 모두 활용한 **풀스택 블로그 웹사이트**입니다.  
 포스트는 Markdown 파일로 작성되며, MongoDB Atlas를 통해 사용자 메시지를 저장하고, Vercel을 통해 실제 배포까지 완료된 프로젝트입니다.
 
 
